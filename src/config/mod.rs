@@ -459,7 +459,7 @@ impl TransformOuter<String> {
             let mut inputs = self.inputs.clone();
 
             for (name, content) in expanded {
-                let full_name = ComponentKey::global(format!("{}.{}", key, name));
+                let full_name = key.create_child(name.as_str());
 
                 let child = TransformOuter {
                     inputs,

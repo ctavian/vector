@@ -290,7 +290,7 @@ mod tests {
             inputs: Vec::<String>::new(),
             inner: Box::new(config),
         };
-        let name = ComponentKey::global("foo");
+        let name = ComponentKey::from("foo");
         let mut transforms = IndexMap::new();
         let mut expansions = IndexMap::new();
         outer
